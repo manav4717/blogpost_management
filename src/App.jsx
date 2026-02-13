@@ -10,6 +10,7 @@ import Register from "./Pages/Register.jsx";
 import AuthGuard from "./auth/AuthGuard.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CreatePost from "./pages/CreatePost.jsx";
 
 function App() {
   const route = createBrowserRouter([
@@ -45,16 +46,12 @@ function App() {
         </AuthGuard>
       ),
     },
+    
     {
       path: "/create-post",
       element: (
         <AuthGuard required={true}>
-          <div
-            style={{ textAlign: "center", padding: "100px", color: "white" }}
-          >
-            <h1>Create Post Page</h1>
-            <p>This page is under construction.</p>
-          </div>
+        <CreatePost/>
         </AuthGuard>
       ),
     },
